@@ -11,11 +11,11 @@ int main()
         len=n.length();
 
  
-        cout<<"\nthe lenth of string is "<<len;
+        cout<<"\nthe length of string is "<<len;
  
         return 0;
 }
 
 // Output
 //ENTER BINARY NUMBER: 11001
-//the lenth of string is 5
+//the length of string is 5
