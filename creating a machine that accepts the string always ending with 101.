@@ -1,21 +1,29 @@
 #include <bits/stdc++.h>
-using namespace std;
 
-int main ()
-{
-  string bin;
-  cout<<endl;
-  cout << "\tDesign A Program For Creating Machine That Accepts Three Consecutive Ones\n";
-  cout<<"Enter Any Binary Number : ";
-  cin>> bin;
-  int size = bin.size ();
-  if (bin[size - 1] == '1' && bin[size - 2] == '1' && bin[size - 3] == '1')
-    {
-      cout<< "Accepted!!! The Last 3 Digits Is Three Consecutive One's\n";
+using namespace std;
+bool has101(string s){
+    int len = s.length();
+    string temp = "";
+    temp += s[len-1];
+    temp += s[len-2];
+    temp += s[len-3];
+    if(temp == "101"){
+        return true;
+    }else{
+        return false;
     }
-  else
-    {
-      cout<< "Failed!!! The Last 3 Binary Number Isn't Three Conseucutive One's\n";
-    }
-  return 0;
 }
+int main()
+{
+    cout<<"Design A Program For Creating A Machine That Accepts The String Always Ending With 101."<<endl;
+    string s;
+    cout<<"Enter The String You Want To Check : ";
+    cin>>s;
+    bool isTrue = has101(s);
+    if(isTrue){
+        cout<<"Your String Is Accepted By Machine : "<<s<<endl;
+        cout<<"Thank You For Using !!!"<<endl;
+    }else{
+        cout<<"Your String Is \"Not Accepted\" By Machine : "<<s<<endl;
+        cout<<"Thank You For Not :) Using !!!"<<endl;
+    }
